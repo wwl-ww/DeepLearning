@@ -335,7 +335,7 @@ output <span class="token operator">=</span> gcn<span class="token punctuation">
     <span class="token keyword keyword-def">def</span> <span class="token function">message</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> x_j<span class="token punctuation">,</span> norm<span class="token punctuation">)</span><span class="token punctuation">:</span>
         <span class="token triple-quoted-string string">"""
         edge_index[0]: (e,) 每条边的起始节点
-        x_j = x[edge_index[0]]: (e, f')  每条边的起始节点的特征形成的矩阵
+        x_j = x[edge_index[1]]: (e, f')  每条边的终点节点的特征形成的矩阵
 
         这个函数实现传播的功能。我们的公式都是站在节点的角度考虑的，而PyG内部考虑的是边。
         我们不要遍历每个节点，我们遍历每一条边，然后将特征从起始边传播到终点边就可以了。
